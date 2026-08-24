@@ -1,0 +1,6 @@
+@WebInterface_HostAddress = http://localhost:5136
+
+GET {{WebInterface_HostAddress}}/api/Employees
+Accept: application/json
+
+###
