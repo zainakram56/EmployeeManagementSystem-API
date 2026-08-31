@@ -25,6 +25,7 @@ namespace WebInterface.Controllers
         {
             var leaveBalances = await _context.LeaveBalances
                 .Include(lb => lb.Employee)
+                .ThenInclude(e => e.Department)
                 .Include(lb => lb.LeaveType)
                 .ToListAsync();
 
